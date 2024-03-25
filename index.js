@@ -3,7 +3,6 @@ const cors = require('cors');
 const path = require('path');
 const dotenv = require("dotenv");
 const connectDB = require('./config/db.js');
-// const  {errorHandler, notFound} = require('./middleware/errorMiddleware.js')
 const userRoutes = require("./routes/userRoute.js");
 const productRoutes = require("./routes/productRoute.js");
 const cartRoutes = require("./routes/cartRoute.js");
@@ -28,9 +27,6 @@ app.use("/users", userRoutes);
 app.use("/products", productRoutes);
 app.use("/carts", cartRoutes);
 app.use("/orders", orderRoutes);
-
-// app.use(notFound); // Handle invalid routes
-// app.use(errorHandler);
 
 /* SERVER SETUP */
 (async() =>{

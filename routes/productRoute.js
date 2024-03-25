@@ -4,6 +4,6 @@ const  authMiddleware = require('../middlewares/authMiddleware')
 
 const productRoutes = express.Router()
 productRoutes.post('/add-product', authMiddleware.authUser , productController.createProduct)
-productRoutes.get('/list', authMiddleware.authUser , productController.getAll)
+productRoutes.get('/list', productController.getAll)
 
 module.exports = productRoutes
